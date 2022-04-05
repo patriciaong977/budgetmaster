@@ -11,10 +11,12 @@ const Details = () => {
       <CardHeader title="Income" />
       <CardContent>
         <Typography variant="h5>">$50</Typography>
-        <Doughnut data="DATA" />
+        {/*<Doughnut data="DATA" />*/}
       </CardContent>
     </Card>
   )
 }
 
 export default Details
+
+// 18:15 time
