@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+
+import Details from './components/Details/Details'; // To use Details
+
 
 const App = () => {
   return (
@@ -9,3 +12,5 @@ const App = () => {
 }
 
 export default App
+
+//16:25

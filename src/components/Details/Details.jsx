@@ -7,7 +7,7 @@ import useStyles from './styles';
 const Details = () => {
   const classes = useStyles();
   return (
-    <Card>
+    <Card className={classes.income}>
       <CardHeader title="Income" />
       <CardContent>
         <Typography variant="h5>">$50</Typography>
