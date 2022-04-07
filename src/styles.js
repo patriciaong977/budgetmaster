@@ -15,6 +15,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       paddingBottom: '5%',
     },
+    background: 'linear-gradient(45deg, #FE6B8B 10%, #FF8E53 20%)',
   },
   last: {
     [theme.breakpoints.down('sm')]: {

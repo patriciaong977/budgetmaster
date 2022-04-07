@@ -17,6 +17,9 @@ export default makeStyles((theme) => ({
   },
   cardContent: {
     paddingTop: 0,
+    color: 'blue',
+    opacity: 0.8,
+    // background: 'linear-gradient(45deg, #eeaeca 30%, #94bbe9 70%)',
   },
   divider: {
     margin: '20px 0',

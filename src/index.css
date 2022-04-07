@@ -8,6 +8,8 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba (0, 0, 0, 0.5)) url(./assets/photo.png);
   background-size: cover;
   */
-  background-color: aquamarine;
+  /*background-color: aquamarine; */
+background: rgb(238, 174, 202);
+background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 
 }
