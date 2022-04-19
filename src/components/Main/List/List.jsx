@@ -11,16 +11,20 @@ import { ExpenseTrackerContext } from '../../../context/context';
 
 const List = () => {
   const classes = useStyles();
-  const { deleteTransaction } = useContext(ExpenseTrackerContext);
+  //const globalState = useContext(ExpenseTrackerContext);
+  const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
 
-  console.log(globalState);
+//console.log(globalState);
 
   // Transaction Array
+  /*
   const transactions = [
     { id: 1, type: "Income", category: 'Salary', amount: 50, date: "Tue Apr 05" },
     { id: 2, type: "Expense", category: 'Pets', amount: 20, date: "Tue Apr 06" },
     { id: 3, type: "Income", category: 'Business', amount: 150, date: "Tue Apr 07" },
   ];
+  */
+
   return (
     <MUIList dense={false} className={classes.list}>
       {transactions.map((transaction) => (
@@ -28,7 +32,7 @@ const List = () => {
           key={transaction.id}>
           <ListItem>
             <ListItemAvatar>
-              <Avatar className={transaction.type == 'Income' ?
+              <Avatar className={transaction.type === 'Income' ?
                 classes.avatarIncome : classes.avatarExpense}>
                 <MoneyOff />
               </Avatar>
