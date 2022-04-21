@@ -5,16 +5,17 @@ import {
   ListItemSecondaryAction, IconButton, Slide
 } from '@material-ui/core'; // have to rename List
 import { Delete, MoneyOff } from '@material-ui/icons';
+import { ExpenseTrackerContext } from '../../../context/context';
 
 import useStyles from './styles';
-import { ExpenseTrackerContext } from '../../../context/context';
+
 
 const List = () => {
   const classes = useStyles();
-  //const globalState = useContext(ExpenseTrackerContext);
   const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
 
-//console.log(globalState);
+  //const globalState = useContext(ExpenseTrackerContext);
+  //console.log(globalState);
 
   // Transaction Array
   /*
@@ -43,7 +44,7 @@ const List = () => {
               secondary={`$${transaction.amount} - ${transaction.date}`} />
 
             <ListItemSecondaryAction>
-              <IconButton edge="end" aria-label="delete" onClick="">
+              <IconButton edge="end" aria-label="delete" onClick={() => deleteTransaction(transaction.id)}>
                 <Delete />
               </IconButton>
             </ListItemSecondaryAction>
@@ -52,7 +53,7 @@ const List = () => {
         </Slide>
       ))}
     </MUIList>
-  )
-}
+  );
+};
 
 export default List
