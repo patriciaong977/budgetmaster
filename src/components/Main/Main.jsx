@@ -13,13 +13,11 @@ const Main = () => {
 
   return (
     <Card className={classes.root}>
-      <CardHeader title="BudgetMaster" subheader="Your personal financial organizer." />
+      <CardHeader style={{ color: '#54de03' }} title="BudgetMaster" subheader="Your personal financial organizer." />
 
       <CardContent>
-        <Typography align="center" variant="h5">Total Balance ${balance}</Typography>
+        <Typography align="center" variant="h5">Total Balance: ${balance}</Typography>
         <Typography variant="subtitle1" style={{ lineHeight: '1.5em', marginTop: '20px' }}>
-          {/* Infocard component .. */}
-        <Typography variant="subtitle2"> </Typography>
         </Typography>
         <Divider />
         {/* Form */}
