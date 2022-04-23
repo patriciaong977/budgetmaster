@@ -32,5 +32,3 @@ const App = () => {
 }
 
 export default App
-
-//16:25

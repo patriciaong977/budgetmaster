@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import useStyles from './styles';
 import { incomeCategories, expenseCategories } from '../../../constants/categories';
+import CustomizedSnackbar from '../../Snackbar/Snackbar';
 
 const initialState = {
   amount: '',
@@ -22,13 +23,16 @@ const Form = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState(initialState);
   const { addTransaction } = useContext(ExpenseTrackerContext);
+  const [open, setOpen] = useState(false);
 
 // Create Transaction Function
   const createTransaction = () => {
+
     const transaction = {
       ...formData, amount: Number(formData.amount), id: uuidv4()
     }
 
+    setOpen(true);
     addTransaction(transaction);
     setFormData(initialState); // Resetting all state fields, to add new transaction.
   }
@@ -39,6 +43,8 @@ const Form = () => {
 
   return (
     <Grid container spacing={2}>
+      <CustomizedSnackbar open={open} setOpen={setOpen} />
+
       <Grid item xs={12}>
         <Typography align="center" variant="subtitle2" gutterBottom> {/*GutterBottom - add margin/padding */}
           {/* Speechly stuff */}
