@@ -1,5 +1,7 @@
 # BudgetMaster
 
+This application acts as a financial organizer to give users a simple digital way to help organize their finances. 
+
 ---
 
 # Getting Started with Create React App
